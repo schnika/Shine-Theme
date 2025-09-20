@@ -88,19 +88,27 @@ function renderLanguageSelector(data, language) {
   } else {
     select.removeAttribute('aria-label');
   }
+
+  const { jQuery } = window;
+  if (jQuery && jQuery.fn && typeof jQuery.fn.selectpicker === 'function') {
+    const $select = jQuery(select);
+    if ($select.data('selectpicker')) {
+      $select.selectpicker('refresh');
+    } else {
+      $select.selectpicker();
+    }
+    if (language) {
+      $select.selectpicker('val', language);
+    }
+  }
 }
 
 function renderTopBar(data) {
   const contactButton = document.getElementById('contact-button');
-  const topBarNote = document.getElementById('top-bar-note');
 
   if (contactButton) {
     contactButton.textContent = data?.contactLabel || '';
     contactButton.href = data?.contactLink || '#';
-  }
-
-  if (topBarNote) {
-    topBarNote.textContent = data?.note || '';
   }
 }
 
