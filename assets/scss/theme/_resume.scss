@@ -1,19 +1,17 @@
 /* ============= Resume Page  ============= */
 .resume-wrapper {
-	margin-top: 90px;
-	position: relative;
-    padding-top: calc(75px + 1rem);
+        margin-top: 90px;
+        position: relative;
+    padding: 3rem 0 0;
     background: $theme-bg-secondary;
 }
 
 .resume-profile-pic {
-	max-width: 160px;
-	height: auto;
-	position: absolute;
-	left: 50%;
-	margin-left: -80px;
-	top: -80px;
-	border: 8px solid $theme-bg-secondary;
+        max-width: 160px;
+        width: 160px;
+        height: auto;
+        border: 8px solid $theme-bg-secondary;
+        display: block;
 }
 
 

@@ -23,7 +23,6 @@
 
         <!-- Theme CSS -->
         <link id="theme-style" rel="stylesheet" href="assets/css/shine.css">
-        <link rel="stylesheet" href="assets/css/print.css" media="print">
         <script defer src="assets/js/i18n.js"></script>
 
 </head>
@@ -35,7 +34,7 @@
 
                         <div class="main-content-wrapper">
                                 <div class="container-fluid">
-                                        <div class="top-bar text-center position-relative">
+                                        <div class="top-bar text-center position-relative d-print-none">
                                                 <div class="top-bar-inner">
                                                         <div class="language-switcher d-flex flex-column flex-sm-row align-items-center justify-content-center gap-2 mb-3">
                                                                 <label id="language-select-label" for="language-select" class="form-label mb-0"></label>
@@ -50,19 +49,23 @@
                                         </div><!--//top-bar-->
 
                                         <div class="resume-wrapper mx-auto rounded-2">
-                                                <div class="resume-header px-4 px-lg-5">
-                                                        <div class="resume-profile-holder text-center">
-                                                                <img class="resume-profile-pic rounded-circle" src="assets/images/patrick-nüser.256x256.jpg" alt="image">
-                                                                <h2 id="resume-name" class="resume-name text-uppercase"></h2>
-                                                                <div id="resume-role-title" class="resume-role-title text-uppercase"></div>
-                                                                <div class="resume-contact mt-4">
-                                                                        <ul id="contact-list" class="resume-contact-list list-unstyled list-inline mb-0 justify-content-between"></ul>
-                                                                </div><!--//resume-contact-->
+                                                <div class="resume-header px-4 px-lg-5 py-4 py-lg-5">
+                                                        <div class="resume-profile-holder text-center text-md-start d-flex flex-column flex-md-row align-items-center align-items-md-start gap-4 gap-lg-5">
+                                                                <div class="flex-shrink-0">
+                                                                        <img id="profile-image" class="resume-profile-pic rounded-circle" src="assets/images/patrick-nüser.256x256.jpg" alt="image">
+                                                                </div>
+                                                                <div class="flex-grow-1 w-100">
+                                                                        <h2 id="resume-name" class="resume-name text-uppercase mb-2 mb-lg-3"></h2>
+                                                                        <div id="resume-role-title" class="resume-role-title text-uppercase"></div>
+                                                                        <div class="resume-contact mt-4 mt-md-3">
+                                                                                <ul id="contact-list" class="resume-contact-list row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3 list-unstyled mb-0"></ul>
+                                                                        </div><!--//resume-contact-->
+                                                                </div>
                                                         </div><!--//profile-holder-->
                                                 </div><!--//resume-header-->
 
                                                 <div class="resume-body p-4 p-lg-5">
-                                                        <div class="row">
+                                                        <div class="row g-4 g-lg-5">
                                                                 <div class="col-main col-12 col-lg-8 pe-lg-4">
                                                                         <section class="resume-summary-section resume-section">
                                                                                 <h3 id="summary-heading" class="resume-section-heading text-uppercase py-2 py-lg-3"><i class="resume-section-heading-icon bi bi-person me-2"></i></h3>
@@ -133,7 +136,7 @@
 
         </div><!--//container-->
 
-        <footer class="footer text-center py-4">
+        <footer class="footer text-center py-4 d-print-none">
                 <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
                 <small class="copyright">Designed with <span class="sr-only">love</span><i class="bi bi-heart-fill" style="color:#fe655c"></i> by <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
         </footer>

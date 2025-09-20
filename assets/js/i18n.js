@@ -126,11 +126,18 @@ function renderHeader(data) {
     const items = Array.isArray(data?.contact) ? data.contact : [];
     items.forEach((item) => {
       const li = document.createElement('li');
-      li.className = item?.className || 'list-inline-item me-md-3 me-lg-5';
+      li.classList.add('col', 'd-flex', 'align-items-center', 'gap-2', 'text-break');
+      const extraClasses = typeof item?.className === 'string' ? item.className.split(' ') : [];
+      extraClasses.forEach((className) => {
+        if (className) {
+          li.classList.add(className);
+        }
+      });
 
       if (item?.icon) {
         const icon = document.createElement('i');
-        icon.className = `resume-contact-icon ${item.icon} me-2`;
+        icon.className = `resume-contact-icon ${item.icon}`;
+        icon.classList.add('flex-shrink-0');
         li.appendChild(icon);
       }
 
@@ -138,9 +145,12 @@ function renderHeader(data) {
         const link = document.createElement('a');
         link.href = item.href;
         link.textContent = item?.text || '';
+        link.classList.add('text-reset', 'text-decoration-none');
         li.appendChild(link);
       } else if (item?.text) {
-        li.appendChild(document.createTextNode(item.text));
+        const span = document.createElement('span');
+        span.textContent = item.text;
+        li.appendChild(span);
       }
 
       contactList.appendChild(li);
