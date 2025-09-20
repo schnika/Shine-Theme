@@ -25,19 +25,16 @@
       {
         "icon": "bi bi-telephone-inbound",
         "href": "tel:+4917662196684",
-        "text": "+49 176 62196684",
-        "className": "list-inline-item me-md-3 me-lg-5"
+        "text": "+49 176 62196684"
       },
       {
         "icon": "bi bi-envelope",
         "href": "mailto:mail@patrick-nueser.de",
-        "text": "mail@patrick-nueser.de",
-        "className": "list-inline-item me-md-3 me-lg-5"
+        "text": "mail@patrick-nueser.de"
       },
       {
         "icon": "bi bi-geo-alt",
-        "text": "Hamburg, Germany",
-        "className": "list-inline-item me-lg-5"
+        "text": "Hamburg, Germany"
       }
     ]
   },
