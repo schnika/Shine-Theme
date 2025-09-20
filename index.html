@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-        <title>Patrick Nüser – Senior Software Engineer</title>
+        <title></title>
 
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Lebenslauf von Patrick Nüser, Senior Software Engineer aus Hamburg.">
+        <meta name="description" content="">
         <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
         <link rel="shortcut icon" href="favicon.ico">
 
@@ -23,6 +23,7 @@
 
         <!-- Theme CSS -->
         <link id="theme-style" rel="stylesheet" href="assets/css/shine.css">
+        <script defer src="assets/js/i18n.js"></script>
 
 </head>
 
@@ -35,10 +36,13 @@
                                 <div class="container-fluid">
                                         <div class="top-bar text-center position-relative">
                                                 <div class="top-bar-inner">
+                                                        <div class="language-switcher d-flex flex-column flex-sm-row align-items-center justify-content-center gap-2 mb-3">
+                                                                <label id="language-select-label" for="language-select" class="form-label mb-0"></label>
+                                                                <select id="language-select" class="form-select form-select-sm w-auto"></select>
+                                                        </div>
+                                                        <a class="btn btn-primary top-bar-cta" id="contact-button" href="#"></a>
 
-                                                        <a class="btn btn-primary top-bar-cta" href="mailto:mail@patrick-nueser.de">Kontakt</a>
-
-                                                        <div class="top-bar-note mt-3">Senior Software Engineer · Team-/Tech-Lead · Cloud &amp; AI Solutions</div>
+                                                        <div class="top-bar-note mt-3" id="top-bar-note"></div>
 
                                                 </div><!--//top-bar-inner-->
 
@@ -47,16 +51,12 @@
                                         <div class="resume-wrapper mx-auto rounded-2">
                                                 <div class="resume-header px-4 px-lg-5">
                                                         <div class="resume-profile-holder text-center">
-                                                                <img class="resume-profile-pic rounded-circle" src="assets/images/profile.png" alt="image">
+                                                                <img id="profile-image" class="resume-profile-pic rounded-circle" src="assets/images/profile.png" alt="">
 
-                                                                <h2 class="resume-name text-uppercase">Patrick Nüser</h2>
-                                                                <div class="resume-role-title text-uppercase">Senior Software Engineer · Team-/Tech-Lead · Cloud &amp; AI Solutions</div>
+                                                                <h2 id="resume-name" class="resume-name text-uppercase"></h2>
+                                                                <div id="resume-role-title" class="resume-role-title text-uppercase"></div>
                                                                 <div class="resume-contact mt-4">
-                                                                        <ul class="resume-contact-list list-unstyled list-inline mb-0 justify-content-between">
-                                                                                <li class="list-inline-item me-md-3 me-lg-5"><i class="resume-contact-icon bi bi-telephone-inbound me-2"></i> <a href="tel:+4917662196684">+49 176 62196684</a></li>
-                                                                                <li class="list-inline-item me-md-3 me-lg-5"><i class="resume-contact-icon bi bi-envelope me-2"></i> <a href="mailto:mail@patrick-nueser.de">mail@patrick-nueser.de</a></li>
-                                                                                <li class="list-inline-item me-lg-5"><i class="resume-contact-icon bi bi-geo-alt me-2"></i> Hamburg, Deutschland</li>
-                                                                        </ul>
+                                                                        <ul id="contact-list" class="resume-contact-list list-unstyled list-inline mb-0 justify-content-between"></ul>
                                                                 </div><!--//resume-contact-->
                                                         </div><!--//profile-holder-->
                                                 </div><!--//resume-header-->
@@ -65,307 +65,66 @@
                                                         <div class="row">
                                                                 <div class="col-main col-12 col-lg-8 pe-lg-4">
                                                                         <section class="resume-summary-section resume-section">
-                                                                                <h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-2 py-lg-3"><i class="resume-section-heading-icon bi bi-person me-2"></i>Profil</h3>
-                                                                                <div class="resume-summary-desc">
-                                                                                        <p>Ich bin Patrick, ein Software Engineer aus Hamburg. Komplexe Probleme motivieren mich, spannende Projekte treiben mich an. Dank meiner analytischen Denkweise erkenne und löse ich Herausforderungen schnell und strukturiert. Besonders im Team kommen meine kommunikativen Fähigkeiten zur Geltung – ich arbeite konstruktiv, lösungsorientiert und mit einem klaren Blick für Kosten und Nutzen.</p>
-                                                                                        <p>Durch meinen sportlichen Hintergrund habe ich Disziplin und Resilienz gelernt: dranzubleiben, wenn es hart wird, und Gelassenheit zu bewahren, wenn es die Situation erlaubt. Neue Technologien begeistern mich – ich entwickle mich fachlich wie persönlich stetig weiter.</p>
-                                                                                </div>
+                                                                                <h3 id="summary-heading" class="resume-section-heading text-uppercase py-2 py-lg-3"><i class="resume-section-heading-icon bi bi-person me-2"></i></h3>
+                                                                                <div id="summary-body" class="resume-summary-desc"></div>
                                                                         </section><!--//resume-section-->
 
                                                                         <hr>
 
                                                                         <section class="resume-experience-section resume-section">
-                                                                                <h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3"><i class="resume-section-heading-icon bi bi-briefcase me-2"></i>Berufserfahrung</h3>
-                                                                                <div class="resume-timeline position-relative">
-                                                                                    <article class="resume-timeline-item position-relative pb-5">
-
-                                                                                            <div class="resume-timeline-item-header mb-2">
-
-                                                                                                    <div class="resume-position-meta d-flex justify-content-between mb-1">
-                                                                                                            <div class="resume-position-time">09/2024 – heute</div>
-                                                                                                            <div class="resume-company-name">1Komma5° Heartbeat GmbH · Hamburg</div>
-                                                                                                    </div>
-                                                                                                <h3 class="resume-position-title mb-1">Senior Softwareentwickler</h3>
-
-                                                                                            </div><!--//resume-timeline-item-header-->
-                                                                                            <div class="resume-timeline-item-desc">
-
-                                                                                                    <ul class="resume-timeline-list">
-                                                                                                            <li>Lead-Qualifizierungs-Service: Technische Projektleitung &amp; Systemdesign → ~10 Min. Zeitersparnis pro Lead, validierte/standardisierte Datenerfassung für Reporting &amp; Downstream-Systeme.</li>
-                                                                                                            <li>Architektur: ADR für Workflow Engines konzipiert → Standardisierung &amp; Skalierbarkeit von CRM-Integrationen.</li>
-                                                                                                            <li>Mentoring: Regelmäßige Pairing-Sessions; Vermittlung von Patterns &amp; Principles → Skill-Aufbau im Team.</li>
-                                                                                                            <li>AI/LLM: Mitgestaltung der LLM-Arbeitsgruppe → Standards für LLM-gestützte Entwicklung etabliert.</li>
-                                                                                                    </ul>
-
-                                                                                            </div><!--//resume-timeline-item-desc-->
-
-                                                                                    </article><!--//resume-timeline-item-->
-
-                                                                                    <article class="resume-timeline-item position-relative pb-5">
-
-                                                                                            <div class="resume-timeline-item-header mb-2">
-
-                                                                                                    <div class="resume-position-meta d-flex justify-content-between mb-1">
-                                                                                                            <div class="resume-position-time">03/2022 – 07/2024</div>
-                                                                                                            <div class="resume-company-name">Njiuko GmbH · Hamburg</div>
-                                                                                                    </div>
-                                                                                                <h3 class="resume-position-title mb-1">Softwareentwickler, Team-/Tech-Lead</h3>
-
-                                                                                            </div><!--//resume-timeline-item-header-->
-                                                                                            <div class="resume-timeline-item-desc">
-                                                                                                    <ul class="resume-timeline-list">
-                                                                                                            <li>Führung: Leitung von 8 Engineers (fachlich &amp; disziplinarisch: Gehaltsgespräche, Entwicklungspläne, OKRs, Recruiting, Offboarding).</li>
-                                                                                                            <li>Effizienz: Standardisierung der HubSpot-Entwicklung via Workflow Engines → Integrationsprojekte bis zu 50 % schneller.</li>
-                                                                                                            <li>Tech-Transformation: Stack-Wandel von Ruby on Rails zu TypeScript aktiv mitgestaltet.</li>
-                                                                                                            <li>Talententwicklung: Umschulung von Mobile- zu Web-Entwicklern → bessere Auslastung &amp; Skill-Diversität.</li>
-                                                                                                            <li>Business Impact: Große Aufträge gewonnen/gesichert (u. a. Gruner &amp; Jahr, Ysolutions); Budgetverantwortung, Angebote, technische Evaluationen.</li>
-                                                                                                    </ul>
-
-                                                                                            </div><!--//resume-timeline-item-desc-->
-
-                                                                                    </article><!--//resume-timeline-item-->
-                                                                                    <article class="resume-timeline-item position-relative pb-5">
-
-                                                                                            <div class="resume-timeline-item-header mb-2">
-
-                                                                                                    <div class="resume-position-meta d-flex justify-content-between mb-1">
-                                                                                                            <div class="resume-position-time">01/2019 – 03/2022</div>
-                                                                                                            <div class="resume-company-name">tourrise GmbH · Hamburg</div>
-                                                                                                    </div>
-                                                                                                <h3 class="resume-position-title mb-1">Technischer Mitgründer (CTO)</h3>
-
-                                                                                            </div><!--//resume-timeline-item-header-->
-                                                                                            <div class="resume-timeline-item-desc">
-                                                                                                    <ul class="resume-timeline-list">
-                                                                                                            <li>Produktaufbau: Architektur &amp; Umsetzung der initialen Infrastruktur (Mandantenfähigkeit, Payment, Front-/Mid-/Backoffice).</li>
-                                                                                                            <li>Integrationen: Schnittstellen zu Flugdienstleistern, Rechnungsstellung, Buchhaltung.</li>
-                                                                                                            <li>Impact: 2 zahlende Kunden (~200 k ARR) → Produkt im Markt etabliert.</li>
-                                                                                                            <li>Tech: Ruby on Rails, Docker, Kamal.</li>
-                                                                                                    </ul>
-
-                                                                                            </div><!--//resume-timeline-item-desc-->
-
-                                                                                    </article><!--//resume-timeline-item-->
-                                                                                    <article class="resume-timeline-item position-relative pb-5">
-
-                                                                                            <div class="resume-timeline-item-header mb-2">
-
-                                                                                                    <div class="resume-position-meta d-flex justify-content-between mb-1">
-                                                                                                            <div class="resume-position-time">03/2017 – 07/2022</div>
-                                                                                                            <div class="resume-company-name">Selbstständig · Remote/Hamburg</div>
-                                                                                                    </div>
-                                                                                                <h3 class="resume-position-title mb-1">Full-Stack Entwickler &amp; Berater</h3>
-
-                                                                                            </div><!--//resume-timeline-item-header-->
-                                                                                            <div class="resume-timeline-item-desc">
-                                                                                                    <ul class="resume-timeline-list">
-                                                                                                            <li>OMR: Reviews-Produkt mitgeplant; Kerninfrastruktur implementiert.</li>
-                                                                                                            <li>Peek &amp; Cloppenburg: Corporate-Sites modernisiert → Next.js + Headless CMS.</li>
-                                                                                                            <li>XING: GDPR-Infrastruktur im „Startpage“-Team mitkonzipiert &amp; entwickelt.</li>
-                                                                                                            <li>A.W. Niemeyer: Shopify-Umzug, Liquid Templates &amp; Custom Apps; ERP-Modernisierung für Echtzeit-Verfügbarkeiten.</li>
-                                                                                                            <li>Weitere Projekte: Technische Architektur/Planung &amp; strategische Beratung (KMU/Enterprise).</li>
-                                                                                                    </ul>
-
-                                                                                            </div><!--//resume-timeline-item-desc-->
-
-                                                                                    </article><!--//resume-timeline-item-->
-                                                                                    <article class="resume-timeline-item position-relative">
-
-                                                                                            <div class="resume-timeline-item-header mb-2">
-
-                                                                                                    <div class="resume-position-meta d-flex justify-content-between mb-1">
-                                                                                                            <div class="resume-position-time">06/2014 – 03/2017</div>
-                                                                                                            <div class="resume-company-name">Njiuko GmbH · Hamburg</div>
-                                                                                                    </div>
-                                                                                                <h3 class="resume-position-title mb-1">Backend Entwickler</h3>
-
-                                                                                            </div><!--//resume-timeline-item-header-->
-                                                                                            <div class="resume-timeline-item-desc">
-                                                                                                    <ul class="resume-timeline-list">
-                                                                                                            <li>Entwicklung neuer und bestehender Plattformen (Protonet SOUL, Lagardère Sports Keeper, Protonet Leads App).</li>
-                                                                                                            <li>DevOps &amp; Betrieb hochverfügbarer Systeme; Code Reviews &amp; Pair Programming.</li>
-                                                                                                    </ul>
-
-                                                                                            </div><!--//resume-timeline-item-desc-->
-
-                                                                                    </article><!--//resume-timeline-item-->
-                                                                    </div><!--//resume-timeline-->
+                                                                                <h3 id="experience-heading" class="resume-section-heading text-uppercase py-2 py-lg-3"><i class="resume-section-heading-icon bi bi-briefcase me-2"></i></h3>
+                                                                                <div id="experience-timeline" class="resume-timeline position-relative"></div>
                                                                         </section><!--//resume-experience-section-->
 
                                                                         <hr>
 
                                                                         <section class="resume-section">
-                                                                                <h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3"><i class="resume-section-heading-icon bi bi-collection me-2"></i>Weitere Erfahrungen (Auswahl)</h3>
-                                                                                <ul class="list-unstyled mb-0">
-                                                                                        <li><strong>Selbstständig (2012–2014):</strong> Buchungssystem (Kontingente, Rollen, REST, Easybill-/Flightstats); Radsportkarte Fuerteventura (mit Hannes Hawaii Tours, Adobe Suite).</li>
-                                                                                        <li><strong>Hannes Hawaii Tours (2009–2014):</strong> Tourguide &amp; Reiseleiter, Gruppen bis 120 Personen, Teamkoordination.</li>
-                                                                                        <li><strong>Jack Wolfskin (2010–2012):</strong> Verkauf von Funktionstextilien &amp; Zubehör.</li>
-                                                                                        <li><strong>SCOL Skireisen (2006–2008):</strong> Leitung von Jugend- &amp; Familiengruppen (Saison).</li>
-                                                                                        <li><strong>Sport Reckemeier (2006–2008):</strong> Laufschuhfachverkäufer; Vertretung Geschäftsführung, Jahresorder.</li>
-                                                                                        <li><strong>Etzhorner Krug (2004–2006):</strong> Tellerwäscher (erster Job).</li>
-                                                                                        <li><strong>Zivildienst (08/2007 – 06/2008):</strong> Landesbildungszentrum für Hörgeschädigte, Oldenburg.</li>
-                                                                                </ul>
+                                                                                <h3 id="additional-experience-heading" class="resume-section-heading text-uppercase py-2 py-lg-3"><i class="resume-section-heading-icon bi bi-collection me-2"></i></h3>
+                                                                                <ul id="additional-experience-list" class="list-unstyled mb-0"></ul>
                                                                         </section><!--//resume-section-->
                                                                 </div><!--//col-8-->
                                                                 <div class="col-12 col-lg-4 ps-lg-4">
 
                                                                         <section class="resume-skills-section resume-section">
-                                                                                <h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3"><i class="resume-section-heading-icon bi bi-gear me-2"></i>Tech Stack</h3>
+                                                                                <h3 id="tech-stack-heading" class="resume-section-heading text-uppercase py-2 py-lg-3"><i class="resume-section-heading-icon bi bi-gear me-2"></i></h3>
 
-                                                                                <ul class="list-unstyled">
-                                                                        <li class="mb-2">
-                                                                            <div class="resume-skill-name">Ruby &amp; Rails</div>
-                                                                                        <div class="progress resume-progress" role="progressbar" aria-label="Kenntnisstand" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                                                                                          <div class="progress-bar resume-progress-bar" style="width: 95%"></div>
-                                                                                        </div>
-                                                                        </li>
-                                                                        <li class="mb-2">
-                                                                            <div class="resume-skill-name">TypeScript, Node.js &amp; NestJS</div>
-                                                                            <div class="progress resume-progress" role="progressbar" aria-label="Kenntnisstand" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
-                                                                                          <div class="progress-bar resume-progress-bar" style="width: 92%"></div>
-                                                                                        </div>
-
-                                                                        </li>
-                                                                        <li class="mb-2">
-                                                                            <div class="resume-skill-name">React, Next.js, Vue &amp; Nuxt</div>
-                                                                                <div class="progress resume-progress" role="progressbar" aria-label="Kenntnisstand" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                                                                                          <div class="progress-bar resume-progress-bar" style="width: 90%"></div>
-                                                                                        </div>
-                                                                        </li>
-                                                                        <li class="mb-2">
-                                                                            <div class="resume-skill-name">Cloud (AWS, Azure, GCP) &amp; DevOps</div>
-                                                                                <div class="progress resume-progress" role="progressbar" aria-label="Kenntnisstand" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
-                                                                                          <div class="progress-bar resume-progress-bar" style="width: 88%"></div>
-                                                                                        </div>
-                                                                        </li>
-                                                                        <li class="mb-2">
-                                                                            <div class="resume-skill-name">Datenbanken &amp; Suche (Postgres, MySQL, Redis, Elasticsearch)</div>
-                                                                                <div class="progress resume-progress" role="progressbar" aria-label="Kenntnisstand" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100">
-                                                                                          <div class="progress-bar resume-progress-bar" style="width: 86%"></div>
-                                                                                        </div>
-                                                                        </li>
-                                                                        <li class="mb-2">
-                                                                            <div class="resume-skill-name">AI/LLM-gestützte Entwicklung</div>
-                                                                                <div class="progress resume-progress" role="progressbar" aria-label="Kenntnisstand" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">
-                                                                                          <div class="progress-bar resume-progress-bar" style="width: 82%"></div>
-                                                                                        </div>
-                                                                        </li>
-                                                                </ul>
+                                                                                <ul id="tech-stack-list" class="list-unstyled"></ul>
 
                                                                         </section><!--//resume-section-->
 
                                                                         <hr>
 
                                                                         <section class="resume-skills-section resume-section">
-                                                                                <h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3"><i class="resume-section-heading-icon bi bi-person-gear me-2"></i>Soft Skills</h3>
-                                                                                <ul class="list-inline">
-                                                                            <li class="list-inline-item"><span class="badge resume-skill-badge">Teamführung &amp; Coaching</span></li>
-                                                                            <li class="list-inline-item"><span class="badge resume-skill-badge">Architektur &amp; Systemdesign</span></li>
-                                                                            <li class="list-inline-item"><span class="badge resume-skill-badge">Stakeholder-Management</span></li>
-                                                                            <li class="list-inline-item"><span class="badge resume-skill-badge">Produktfokus &amp; Kosten-Nutzen</span></li>
-                                                                            <li class="list-inline-item"><span class="badge resume-skill-badge">Mentoring &amp; Pairing</span></li>
-                                                                            <li class="list-inline-item"><span class="badge resume-skill-badge">Code-Quality &amp; Reviews</span></li>
-                                                                    </ul>
+                                                                                <h3 id="soft-skills-heading" class="resume-section-heading text-uppercase py-2 py-lg-3"><i class="resume-section-heading-icon bi bi-person-gear me-2"></i></h3>
+                                                                                <ul id="soft-skills-list" class="list-inline"></ul>
                                                                         </section><!--//resume-section-->
 
                                                                         <hr>
 
                                                                         <section class="resume-projects-section resume-section">
-                                                                                <h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3"><i class="resume-section-heading-icon bi bi-code-slash me-2"></i>Projekte (Auswahl)</h3>
-                                                                                <div class="item">
-                                                                                        <h4 class="item-heading"><i class="item-icon bi bi-square-fill me-2"></i>OMR – Reviews</h4>
-                                                                                        <div class="item-desc">
-                                                                                                Reviews-Produkt mitgeplant und Kernkomponenten der skalierbaren Architektur implementiert.
-                                                                                        </div>
-                                                                                </div><!--//item-->
-                                                                                <div class="item">
-                                                                                        <h4 class="item-heading"><i class="item-icon bi bi-square-fill me-2"></i>Peek &amp; Cloppenburg – Corporate Sites</h4>
-                                                                                        <div class="item-desc">
-                                                                                                Corporate-Websites modernisiert: Next.js + Headless CMS für bessere Performance &amp; effizientere Workflows.
-                                                                                        </div>
-                                                                                </div><!--//item-->
-                                                                                <div class="item">
-                                                                                        <h4 class="item-heading"><i class="item-icon bi bi-square-fill me-2"></i>XING – GDPR-Infrastruktur</h4>
-                                                                                        <div class="item-desc">
-                                                                                                Compliance-fähige Systeme im „Startpage“-Team mitkonzipiert und entwickelt, Fokus auf Stabilität &amp; Wartbarkeit.
-                                                                                        </div>
-                                                                                </div><!--//item-->
-                                                                                <div class="item">
-                                                                                        <h4 class="item-heading"><i class="item-icon bi bi-square-fill me-2"></i>A.W. Niemeyer – Shopify &amp; ERP</h4>
-                                                                                        <div class="item-desc">
-                                                                                                Shopify-Migration inkl. Custom Apps; ERP-Modernisierung für Echtzeit-Verfügbarkeiten im Handel.
-                                                                                        </div>
-                                                                                </div><!--//item-->
-
+                                                                                <h3 id="projects-heading" class="resume-section-heading text-uppercase py-2 py-lg-3"><i class="resume-section-heading-icon bi bi-code-slash me-2"></i></h3>
+                                                                                <div id="projects-list"></div>
                                                                         </section>
 
                                                                         <hr>
 
                                                                         <section class="resume-educate-section resume-section">
-                                                                                <h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3"><i class="resume-section-heading-icon bi bi-book me-2"></i>Ausbildung</h3>
-                                                                                <ul class="list-unstyled">
-                                                                                    <li class="mb-2">
-                                                                                        <div class="resume-degree font-weight-bold">B.Sc. Informatik</div>
-                                                                                        <div class="resume-degree-org">Universität Osnabrück</div>
-                                                                                        <div class="resume-degree-time">Abschluss 12/2013</div>
-                                                                                        <div class="resume-degree-desc">Abschlussarbeit: Entwicklung einer Livestreaming- &amp; VOD-Komponente für ein Online-Rückenstudio. Tutorien: Software Engineering (04–07/2013); Gleichungsbasierte Modelle I (04–07/2012).</div>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <div class="resume-degree font-weight-bold">Auslandssemester Informatik</div>
-                                                                                        <div class="resume-degree-org">Universität Stockholm</div>
-                                                                                        <div class="resume-degree-time">08/2012 – 02/2013</div>
-                                                                                        <div class="resume-degree-desc">Schwerpunkte: Data Mining, Network Security, Computer Security.</div>
-                                                                                    </li>
-                                                                            </ul>
+                                                                                <h3 id="education-heading" class="resume-section-heading text-uppercase py-2 py-lg-3"><i class="resume-section-heading-icon bi bi-book me-2"></i></h3>
+                                                                                <ul id="education-list" class="list-unstyled"></ul>
                                                                         </section><!--//resume-section-->
 
                                                                         <hr>
 
                                                                         <section class="resume-lang-section resume-section">
-                                                                                <h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3"><i class="resume-section-heading-icon bi bi-translate me-2"></i>Sprachen</h3>
-                                                                                 <ul class="list-unstyled resume-lang-list">
-                                                                                    <li class="mb-2">
-                                                                                        <div class="resume-lang-name">Deutsch (Muttersprache)</div>
-                                                                                        <div class="resume-level-indicator row gx-0 flex-nowrap">
-                                                                                                <div class="col"><span class="item item-full"></span></div>
-                                                                                                <div class="col"><span class="item item-full"></span></div>
-                                                                                                <div class="col"><span class="item item-full"></span></div>
-                                                                                                <div class="col"><span class="item item-full"></span></div>
-                                                                                                <div class="col"><span class="item item-full"></span></div>
-                                                                                                <div class="col"><span class="item item-full"></span></div>
-                                                                                                <div class="col"><span class="item item-full"></span></div>
-                                                                                                <div class="col"><span class="item item-full"></span></div>
-                                                                                                <div class="col"><span class="item item-full"></span></div>
-                                                                                                <div class="col"><span class="item item-full"></span></div>
-                                                                                        </div><!--//resume-level-indicator-->
-                                                                                    </li>
-                                                                                     <li>
-                                                                                        <div class="resume-lang-name">Englisch (fließend)</div>
-                                                                                        <div class="resume-level-indicator row gx-0 flex-nowrap">
-                                                                                                <div class="col"><span class="item item-full"></span></div>
-                                                                                                <div class="col"><span class="item item-full"></span></div>
-                                                                                                <div class="col"><span class="item item-full"></span></div>
-                                                                                                <div class="col"><span class="item item-full"></span></div>
-                                                                                                <div class="col"><span class="item item-full"></span></div>
-                                                                                                <div class="col"><span class="item item-full"></span></div>
-                                                                                                <div class="col"><span class="item item-full"></span></div>
-                                                                                                <div class="col"><span class="item item-full"></span></div>
-                                                                                                <div class="col"><span class="item item-full"></span></div>
-                                                                                                <div class="col"><span class="item item-half"></span></div>
-                                                                                        </div><!--//resume-level-indicator-->
-                                                                                    </li>
-                                                                                </ul>
+                                                                                <h3 id="languages-heading" class="resume-section-heading text-uppercase py-2 py-lg-3"><i class="resume-section-heading-icon bi bi-translate me-2"></i></h3>
+                                                                                 <ul id="languages-list" class="list-unstyled resume-lang-list"></ul>
                                                                         </section>
 
                                                                         <hr>
 
                                                                         <section class="resume-interests-section resume-section">
-                                                                                <h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3"><i class="resume-section-heading-icon bi bi-sun me-2"></i>Interessen</h3>
-                                                                                <ul class="list-inline">
-                                                                                    <li class="list-inline-item"><span class="badge resume-skill-badge">Langjähriger Leistungssport (Triathlon, Laufen, Rennrad)</span></li>
-                                                                                    <li class="list-inline-item"><span class="badge resume-skill-badge">Kochen &amp; Essen</span></li>
-                                                                                    <li class="list-inline-item"><span class="badge resume-skill-badge">Tech &amp; Games</span></li>
-                                                                                </ul>
+                                                                                <h3 id="interests-heading" class="resume-section-heading text-uppercase py-2 py-lg-3"><i class="resume-section-heading-icon bi bi-sun me-2"></i></h3>
+                                                                                <ul id="interests-list" class="list-inline"></ul>
                                                                         </section>
 
 

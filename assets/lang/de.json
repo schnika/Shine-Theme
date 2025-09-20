@@ -1,0 +1,221 @@
+{
+  "meta": {
+    "lang": "de",
+    "title": "Patrick Nüser – Senior Software Engineer",
+    "description": "Lebenslauf von Patrick Nüser, Senior Software Engineer aus Hamburg."
+  },
+  "languageSelector": {
+    "label": "Sprache",
+    "ariaLabel": "Sprache auswählen",
+    "options": [
+      { "value": "en", "label": "Englisch" },
+      { "value": "de", "label": "Deutsch" }
+    ]
+  },
+  "topBar": {
+    "contactLabel": "Kontakt",
+    "contactLink": "mailto:mail@patrick-nueser.de",
+    "note": "Senior Software Engineer · Team-/Tech-Lead · Cloud & AI Solutions"
+  },
+  "header": {
+    "name": "Patrick Nüser",
+    "role": "Senior Software Engineer · Team-/Tech-Lead · Cloud & AI Solutions",
+    "profileImageAlt": "Porträt von Patrick Nüser",
+    "contact": [
+      {
+        "icon": "bi bi-telephone-inbound",
+        "href": "tel:+4917662196684",
+        "text": "+49 176 62196684",
+        "className": "list-inline-item me-md-3 me-lg-5"
+      },
+      {
+        "icon": "bi bi-envelope",
+        "href": "mailto:mail@patrick-nueser.de",
+        "text": "mail@patrick-nueser.de",
+        "className": "list-inline-item me-md-3 me-lg-5"
+      },
+      {
+        "icon": "bi bi-geo-alt",
+        "text": "Hamburg, Deutschland",
+        "className": "list-inline-item me-lg-5"
+      }
+    ]
+  },
+  "summary": {
+    "heading": "Profil",
+    "paragraphs": [
+      "Ich bin Patrick, ein Software Engineer aus Hamburg. Komplexe Probleme motivieren mich, spannende Projekte treiben mich an. Dank meiner analytischen Denkweise erkenne und löse ich Herausforderungen schnell und strukturiert. Besonders im Team kommen meine kommunikativen Fähigkeiten zur Geltung – ich arbeite konstruktiv, lösungsorientiert und mit einem klaren Blick für Kosten und Nutzen.",
+      "Durch meinen sportlichen Hintergrund habe ich Disziplin und Resilienz gelernt: dranzubleiben, wenn es hart wird, und Gelassenheit zu bewahren, wenn es die Situation erlaubt. Neue Technologien begeistern mich – ich entwickle mich fachlich wie persönlich stetig weiter."
+    ]
+  },
+  "experience": {
+    "heading": "Berufserfahrung",
+    "items": [
+      {
+        "time": "09/2024 – heute",
+        "company": "1Komma5° Heartbeat GmbH · Hamburg",
+        "title": "Senior Softwareentwickler",
+        "bullets": [
+          "Lead-Qualifizierungs-Service: Technische Projektleitung & Systemdesign → ~10 Min. Zeitersparnis pro Lead, validierte/standardisierte Datenerfassung für Reporting & Downstream-Systeme.",
+          "Architektur: ADR für Workflow Engines konzipiert → Standardisierung & Skalierbarkeit von CRM-Integrationen.",
+          "Mentoring: Regelmäßige Pairing-Sessions; Vermittlung von Patterns & Principles → Skill-Aufbau im Team.",
+          "AI/LLM: Mitgestaltung der LLM-Arbeitsgruppe → Standards für LLM-gestützte Entwicklung etabliert."
+        ]
+      },
+      {
+        "time": "03/2022 – 07/2024",
+        "company": "Njiuko GmbH · Hamburg",
+        "title": "Softwareentwickler, Team-/Tech-Lead",
+        "bullets": [
+          "Führung: Leitung von 8 Engineers (fachlich & disziplinarisch: Gehaltsgespräche, Entwicklungspläne, OKRs, Recruiting, Offboarding).",
+          "Effizienz: Standardisierung der HubSpot-Entwicklung via Workflow Engines → Integrationsprojekte bis zu 50 % schneller.",
+          "Tech-Transformation: Stack-Wandel von Ruby on Rails zu TypeScript aktiv mitgestaltet.",
+          "Talententwicklung: Umschulung von Mobile- zu Web-Entwicklern → bessere Auslastung & Skill-Diversität.",
+          "Business Impact: Große Aufträge gewonnen/gesichert (u. a. Gruner & Jahr, Ysolutions); Budgetverantwortung, Angebote, technische Evaluationen."
+        ]
+      },
+      {
+        "time": "01/2019 – 03/2022",
+        "company": "tourrise GmbH · Hamburg",
+        "title": "Technischer Mitgründer (CTO)",
+        "bullets": [
+          "Produktaufbau: Architektur & Umsetzung der initialen Infrastruktur (Mandantenfähigkeit, Payment, Front-/Mid-/Backoffice).",
+          "Integrationen: Schnittstellen zu Flugdienstleistern, Rechnungsstellung, Buchhaltung.",
+          "Impact: 2 zahlende Kunden (~200 k ARR) → Produkt im Markt etabliert.",
+          "Tech: Ruby on Rails, Docker, Kamal."
+        ]
+      },
+      {
+        "time": "03/2017 – 07/2022",
+        "company": "Selbstständig · Remote/Hamburg",
+        "title": "Full-Stack Entwickler & Berater",
+        "bullets": [
+          "OMR: Reviews-Produkt mitgeplant; Kerninfrastruktur implementiert.",
+          "Peek & Cloppenburg: Corporate-Sites modernisiert → Next.js + Headless CMS.",
+          "XING: GDPR-Infrastruktur im „Startpage“-Team mitkonzipiert & entwickelt.",
+          "A.W. Niemeyer: Shopify-Umzug, Liquid Templates & Custom Apps; ERP-Modernisierung für Echtzeit-Verfügbarkeiten.",
+          "Weitere Projekte: Technische Architektur/Planung & strategische Beratung (KMU/Enterprise)."
+        ]
+      },
+      {
+        "time": "06/2014 – 03/2017",
+        "company": "Njiuko GmbH · Hamburg",
+        "title": "Backend Entwickler",
+        "bullets": [
+          "Entwicklung neuer und bestehender Plattformen (Protonet SOUL, Lagardère Sports Keeper, Protonet Leads App).",
+          "DevOps & Betrieb hochverfügbarer Systeme; Code Reviews & Pair Programming."
+        ]
+      }
+    ]
+  },
+  "additionalExperience": {
+    "heading": "Weitere Erfahrungen (Auswahl)",
+    "items": [
+      {
+        "title": "Selbstständig (2012–2014)",
+        "description": "Buchungssystem (Kontingente, Rollen, REST, Easybill-/Flightstats); Radsportkarte Fuerteventura (mit Hannes Hawaii Tours, Adobe Suite)."
+      },
+      {
+        "title": "Hannes Hawaii Tours (2009–2014)",
+        "description": "Tourguide & Reiseleiter, Gruppen bis 120 Personen, Teamkoordination."
+      },
+      {
+        "title": "Jack Wolfskin (2010–2012)",
+        "description": "Verkauf von Funktionstextilien & Zubehör."
+      },
+      {
+        "title": "SCOL Skireisen (2006–2008)",
+        "description": "Leitung von Jugend- & Familiengruppen (Saison)."
+      },
+      {
+        "title": "Sport Reckemeier (2006–2008)",
+        "description": "Laufschuhfachverkäufer; Vertretung Geschäftsführung, Jahresorder."
+      },
+      {
+        "title": "Etzhorner Krug (2004–2006)",
+        "description": "Tellerwäscher (erster Job)."
+      },
+      {
+        "title": "Zivildienst (08/2007 – 06/2008)",
+        "description": "Landesbildungszentrum für Hörgeschädigte, Oldenburg."
+      }
+    ]
+  },
+  "techStack": {
+    "heading": "Tech Stack",
+    "progressAriaLabel": "Kenntnisstand",
+    "items": [
+      { "name": "Ruby & Rails", "value": 95 },
+      { "name": "TypeScript, Node.js & NestJS", "value": 92 },
+      { "name": "React, Next.js, Vue & Nuxt", "value": 90 },
+      { "name": "Cloud (AWS, Azure, GCP) & DevOps", "value": 88 },
+      { "name": "Datenbanken & Suche (Postgres, MySQL, Redis, Elasticsearch)", "value": 86 },
+      { "name": "AI/LLM-gestützte Entwicklung", "value": 82 }
+    ]
+  },
+  "softSkills": {
+    "heading": "Soft Skills",
+    "items": [
+      "Teamführung & Coaching",
+      "Architektur & Systemdesign",
+      "Stakeholder-Management",
+      "Produktfokus & Kosten-Nutzen",
+      "Mentoring & Pairing",
+      "Code-Quality & Reviews"
+    ]
+  },
+  "projects": {
+    "heading": "Projekte (Auswahl)",
+    "items": [
+      {
+        "name": "OMR – Reviews",
+        "description": "Reviews-Produkt mitgeplant und Kernkomponenten der skalierbaren Architektur implementiert."
+      },
+      {
+        "name": "Peek & Cloppenburg – Corporate Sites",
+        "description": "Corporate-Websites modernisiert: Next.js + Headless CMS für bessere Performance & effizientere Workflows."
+      },
+      {
+        "name": "XING – GDPR-Infrastruktur",
+        "description": "Compliance-fähige Systeme im „Startpage“-Team mitkonzipiert und entwickelt, Fokus auf Stabilität & Wartbarkeit."
+      },
+      {
+        "name": "A.W. Niemeyer – Shopify & ERP",
+        "description": "Shopify-Migration inkl. Custom Apps; ERP-Modernisierung für Echtzeit-Verfügbarkeiten im Handel."
+      }
+    ]
+  },
+  "education": {
+    "heading": "Ausbildung",
+    "items": [
+      {
+        "degree": "B.Sc. Informatik",
+        "organisation": "Universität Osnabrück",
+        "time": "Abschluss 12/2013",
+        "description": "Abschlussarbeit: Entwicklung einer Livestreaming- & VOD-Komponente für ein Online-Rückenstudio. Tutorien: Software Engineering (04–07/2013); Gleichungsbasierte Modelle I (04–07/2012)."
+      },
+      {
+        "degree": "Auslandssemester Informatik",
+        "organisation": "Universität Stockholm",
+        "time": "08/2012 – 02/2013",
+        "description": "Schwerpunkte: Data Mining, Network Security, Computer Security."
+      }
+    ]
+  },
+  "languages": {
+    "heading": "Sprachen",
+    "maxLevel": 10,
+    "items": [
+      { "name": "Deutsch (Muttersprache)", "level": 10 },
+      { "name": "Englisch (fließend)", "level": 9.5 }
+    ]
+  },
+  "interests": {
+    "heading": "Interessen",
+    "items": [
+      "Langjähriger Leistungssport (Triathlon, Laufen, Rennrad)",
+      "Kochen & Essen",
+      "Tech & Games"
+    ]
+  }
+}
