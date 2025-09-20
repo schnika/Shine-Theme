@@ -264,6 +264,39 @@ function renderTechStack(data) {
   }
 
   list.innerHTML = '';
+  const groups = Array.isArray(data?.groups) ? data.groups : [];
+  if (groups.length > 0) {
+    groups.forEach((group) => {
+      const li = document.createElement('li');
+      li.className = 'mb-3';
+
+      if (group?.title) {
+        const title = document.createElement('div');
+        title.className = 'resume-skill-name';
+        title.textContent = group.title;
+        li.appendChild(title);
+      }
+
+      const groupItems = Array.isArray(group?.items) ? group.items : [];
+      if (groupItems.length > 0) {
+        const badges = document.createElement('div');
+        badges.className = 'd-flex flex-wrap gap-2 mt-2';
+
+        groupItems.forEach((item) => {
+          const badge = document.createElement('span');
+          badge.className = 'badge resume-skill-badge';
+          badge.textContent = item;
+          badges.appendChild(badge);
+        });
+
+        li.appendChild(badges);
+      }
+
+      list.appendChild(li);
+    });
+    return;
+  }
+
   const items = Array.isArray(data?.items) ? data.items : [];
   items.forEach((item) => {
     const li = document.createElement('li');

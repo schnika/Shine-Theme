@@ -57,7 +57,7 @@
         "title": "Senior Softwareentwickler",
         "bullets": [
           "Lead-Qualifizierungs-Service: Technische Projektleitung & Systemdesign → ~10 Min. Zeitersparnis pro Lead, validierte/standardisierte Datenerfassung für Reporting & Downstream-Systeme.",
-          "Architektur: ADR für Workflow Engines konzipiert → Standardisierung & Skalierbarkeit von CRM-Integrationen.",
+          "Architektur: ADR für Workflow Engines & Zoho CRM konzipiert → Standardisierung & Skalierbarkeit von CRM-Integrationen.",
           "Mentoring: Regelmäßige Pairing-Sessions; Vermittlung von Patterns & Principles → Skill-Aufbau im Team.",
           "AI/LLM: Mitgestaltung der LLM-Arbeitsgruppe → Standards für LLM-gestützte Entwicklung etabliert."
         ]
@@ -143,14 +143,51 @@
   },
   "techStack": {
     "heading": "Tech Stack",
-    "progressAriaLabel": "Kenntnisstand",
-    "items": [
-      { "name": "Ruby & Rails", "value": 95 },
-      { "name": "TypeScript, Node.js & NestJS", "value": 92 },
-      { "name": "React, Next.js, Vue & Nuxt", "value": 90 },
-      { "name": "Cloud (AWS, Azure, GCP) & DevOps", "value": 88 },
-      { "name": "Datenbanken & Suche (Postgres, MySQL, Redis, Elasticsearch)", "value": 86 },
-      { "name": "AI/LLM-gestützte Entwicklung", "value": 82 }
+    "groups": [
+      {
+        "title": "Sprachen & Frameworks",
+        "items": [
+          "Ruby & Ruby on Rails",
+          "TypeScript, Node.js & NestJS",
+          "React, Next.js, Vue & Nuxt"
+        ]
+      },
+      {
+        "title": "Cloud & Betrieb",
+        "items": [
+          "AWS, Azure & GCP",
+          "Docker & Kamal"
+        ]
+      },
+      {
+        "title": "Daten & Speicher",
+        "items": [
+          "Postgres & MySQL",
+          "Redis & Elasticsearch"
+        ]
+      },
+      {
+        "title": "CRM & Automatisierung",
+        "items": [
+          "Zoho CRM",
+          "HubSpot",
+          "Workflow Engines & Integrationen"
+        ]
+      },
+      {
+        "title": "Commerce & Content-Plattformen",
+        "items": [
+          "Shopify & Liquid",
+          "Headless-CMS-Architekturen"
+        ]
+      },
+      {
+        "title": "KI & Enablement",
+        "items": [
+          "LLM-gestützte Entwicklung",
+          "KI-Experimente & Prototyping"
+        ]
+      }
     ]
   },
   "softSkills": {
