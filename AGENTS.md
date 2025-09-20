@@ -8,7 +8,7 @@ This project is a fully static résumé site. Everything runs in the browser wit
 
 ## Tooling & Dependencies
 - Keep the stack simple: do not add frontend frameworks, component compilers, build pipelines, or runtime dependencies (React, Vue, Angular, Webpack, Vite, etc.).
-- Stick to vanilla ES6 modules/DOM APIs, hand-authored HTML, and plain CSS (optionally generated from the existing SCSS files).
+- Stick to vanilla ES6 modules/DOM APIs, hand-authored HTML, and plain CSS (generated from the existing SCSS files).
 - Third-party assets already in the project (Bootstrap CSS, Bootstrap Icons, Font Awesome) may be used as-is, but avoid introducing new library CDNs unless absolutely necessary.
 
 ## HTML Guidelines
@@ -17,8 +17,10 @@ This project is a fully static résumé site. Everything runs in the browser wit
 - Keep accessibility attributes (alt text, aria labels, roles) accurate whenever you change content.
 
 ## CSS/SCSS Guidelines
-- The shipped stylesheet lives in `assets/css/shine.css`; edit it directly for small tweaks.
-- If you choose to modify the SCSS sources in `assets/scss/`, make sure you also update the compiled CSS so that the site reflects your changes.
+- Uses bootstrap v5.3.3
+- Use bootstrap components and utilities
+- The shipped stylesheet lives in `assets/css/shine.css` - DO NOT edit directly.
+- Modify the SCSS sources in `assets/scss/`, and use sass to regenerate `shine.css` file
 - Keep the layout responsive and mobile-friendly; test at multiple viewport widths when you adjust styling.
 
 ## JavaScript Guidelines
