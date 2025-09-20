@@ -1,0 +1,261 @@
+{
+  "meta": {
+    "lang": "en",
+    "title": "Patrick Nüser – Senior Software Engineer",
+    "description": "Resume of Patrick Nüser, Senior Software Engineer from Hamburg."
+  },
+  "languageSelector": {
+    "label": "Language",
+    "ariaLabel": "Select language",
+    "options": [
+      { "value": "en", "label": "English" },
+      { "value": "de", "label": "German" }
+    ]
+  },
+  "topBar": {
+    "contactLabel": "Contact",
+    "contactLink": "mailto:mail@patrick-nueser.de",
+    "note": "Senior Software Engineer · Team/Tech Lead · Cloud & AI Solutions"
+  },
+  "header": {
+    "name": "Patrick Nüser",
+    "role": "Senior Software Engineer · Team/Tech Lead · Cloud & AI Solutions",
+    "profileImageAlt": "Portrait of Patrick Nüser",
+    "contact": [
+      {
+        "icon": "bi bi-telephone-inbound",
+        "href": "tel:+4917662196684",
+        "text": "+49 176 62196684",
+        "className": "list-inline-item me-md-3 me-lg-5"
+      },
+      {
+        "icon": "bi bi-envelope",
+        "href": "mailto:mail@patrick-nueser.de",
+        "text": "mail@patrick-nueser.de",
+        "className": "list-inline-item me-md-3 me-lg-5"
+      },
+      {
+        "icon": "bi bi-geo-alt",
+        "text": "Hamburg, Germany",
+        "className": "list-inline-item me-lg-5"
+      }
+    ]
+  },
+  "summary": {
+    "heading": "Profile",
+    "paragraphs": [
+      "I'm Patrick, a software engineer from Hamburg. Complex problems motivate me, exciting projects drive me. Thanks to my analytical mindset I recognize and solve challenges quickly and in a structured way. Especially in teams my communication skills shine – I work constructively, solution-oriented and with a clear view of cost and benefit.",
+      "My sports background taught me discipline and resilience: sticking with it when things get tough and staying calm when the situation allows. New technologies excite me – I continuously develop both professionally and personally."
+    ]
+  },
+  "experience": {
+    "heading": "Professional Experience",
+    "items": [
+      {
+        "time": "09/2024 – present",
+        "company": "1Komma5° Heartbeat GmbH · Hamburg",
+        "title": "Senior Software Engineer",
+        "bullets": [
+          "Lead qualification service: technical project leadership & system design → ~10 minutes saved per lead, validated/standardized data capture for reporting & downstream systems.",
+          "Architecture: designed ADRs for workflow engines → standardized & scalable CRM integrations.",
+          "Mentoring: regular pairing sessions; sharing patterns & principles → capability building within the team.",
+          "AI/LLM: co-shaped the LLM working group → established standards for LLM-assisted development."
+        ]
+      },
+      {
+        "time": "03/2022 – 07/2024",
+        "company": "Njiuko GmbH · Hamburg",
+        "title": "Software Engineer, Team/Tech Lead",
+        "bullets": [
+          "Leadership: managed 8 engineers (disciplinary & functional: salary reviews, development plans, OKRs, recruiting, offboarding).",
+          "Efficiency: standardized HubSpot development via workflow engines → integration projects up to 50% faster.",
+          "Tech transformation: actively shaped the shift from Ruby on Rails to TypeScript.",
+          "Talent development: retrained mobile engineers to web → higher utilization & skill diversity.",
+          "Business impact: won/retained major accounts (incl. Gruner & Jahr, Ysolutions); budget ownership, proposals, technical evaluations."
+        ]
+      },
+      {
+        "time": "01/2019 – 03/2022",
+        "company": "tourrise GmbH · Hamburg",
+        "title": "Technical Co-Founder (CTO)",
+        "bullets": [
+          "Product build: architecture & implementation of the initial infrastructure (multi-tenancy, payments, front-/mid-/back office).",
+          "Integrations: interfaces to flight providers, invoicing, accounting.",
+          "Impact: 2 paying customers (~€200k ARR) → established product in the market.",
+          "Tech: Ruby on Rails, Docker, Kamal."
+        ]
+      },
+      {
+        "time": "03/2017 – 07/2022",
+        "company": "Self-employed · Remote/Hamburg",
+        "title": "Full-Stack Engineer & Consultant",
+        "bullets": [
+          "OMR: co-planned the reviews product; implemented core infrastructure.",
+          "Peek & Cloppenburg: modernized corporate sites → Next.js + headless CMS.",
+          "XING: co-designed & built GDPR infrastructure in the Startpage team.",
+          "A.W. Niemeyer: Shopify migration, Liquid templates & custom apps; modernized ERP for real-time availability.",
+          "Other projects: technical architecture/planning & strategic consulting (SMB/enterprise)."
+        ]
+      },
+      {
+        "time": "06/2014 – 03/2017",
+        "company": "Njiuko GmbH · Hamburg",
+        "title": "Backend Engineer",
+        "bullets": [
+          "Built new & existing platforms (Protonet SOUL, Lagardère Sports Keeper, Protonet Leads App).",
+          "DevOps & operations for highly available systems; code reviews & pair programming."
+        ]
+      }
+    ]
+  },
+  "additionalExperience": {
+    "heading": "Additional experience (selected)",
+    "items": [
+      {
+        "title": "Freelance (2012–2014)",
+        "description": "Booking system (inventory, roles, REST, Easybill/Flightstats); road cycling map Fuerteventura (with Hannes Hawaii Tours, Adobe Suite)."
+      },
+      {
+        "title": "Hannes Hawaii Tours (2009–2014)",
+        "description": "Tour guide & travel lead, groups up to 120 people, team coordination."
+      },
+      {
+        "title": "Jack Wolfskin (2010–2012)",
+        "description": "Sold functional textiles & accessories."
+      },
+      {
+        "title": "SCOL Ski Trips (2006–2008)",
+        "description": "Led youth & family groups (seasonal)."
+      },
+      {
+        "title": "Sport Reckemeier (2006–2008)",
+        "description": "Specialist running shoe sales; deputized store management, annual ordering."
+      },
+      {
+        "title": "Etzhorner Krug (2004–2006)",
+        "description": "Dishwasher (first job)."
+      },
+      {
+        "title": "Civil service (08/2007 – 06/2008)",
+        "description": "State Education Center for the Hearing Impaired, Oldenburg."
+      }
+    ]
+  },
+  "techStack": {
+    "heading": "Tech Stack",
+    "groups": [
+      {
+        "title": "Backend & Platforms",
+        "items": [
+          "Ruby",
+          "Ruby on Rails",
+          "TypeScript",
+          "Node.js",
+          "NestJS",
+          "REST APIs"
+        ]
+      },
+      {
+        "title": "Frontend & Commerce",
+        "items": [
+          "React",
+          "Next.js",
+          "Vue.js",
+          "Nuxt",
+          "Headless CMS",
+          "Shopify",
+          "Liquid Templates"
+        ]
+      },
+      {
+        "title": "Cloud & DevOps",
+        "items": [
+          "AWS",
+          "Azure",
+          "Google Cloud",
+          "Docker",
+          "Kamal"
+        ]
+      },
+      {
+        "title": "Data, AI & Integrations",
+        "items": [
+          "PostgreSQL",
+          "MySQL",
+          "Redis",
+          "Elasticsearch",
+          "HubSpot",
+          "Workflow engines",
+          "ERP integrations",
+          "Payment & billing APIs",
+          "LLM-assisted development"
+        ]
+      }
+    ]
+  },
+  "softSkills": {
+    "heading": "Soft Skills",
+    "items": [
+      "Team leadership & coaching",
+      "Architecture & system design",
+      "Stakeholder management",
+      "Product focus & cost-benefit",
+      "Mentoring & pairing",
+      "Code quality & reviews"
+    ]
+  },
+  "projects": {
+    "heading": "Projects (selected)",
+    "items": [
+      {
+        "name": "OMR – Reviews",
+        "description": "Co-planned the reviews product and implemented core components of the scalable architecture."
+      },
+      {
+        "name": "Peek & Cloppenburg – Corporate Sites",
+        "description": "Modernized corporate websites: Next.js + headless CMS for better performance & more efficient workflows."
+      },
+      {
+        "name": "XING – GDPR Infrastructure",
+        "description": "Co-designed and built compliance-ready systems in the Startpage team with focus on stability & maintainability."
+      },
+      {
+        "name": "A.W. Niemeyer – Shopify & ERP",
+        "description": "Shopify migration including custom apps; modernized ERP for real-time availability in retail."
+      }
+    ]
+  },
+  "education": {
+    "heading": "Education",
+    "items": [
+      {
+        "degree": "B.Sc. Computer Science",
+        "organisation": "University of Osnabrück",
+        "time": "Graduated 12/2013",
+        "description": "Thesis: Developed a live streaming & VOD component for an online back training studio. Tutorials: Software Engineering (04–07/2013); Equation-based Models I (04–07/2012)."
+      },
+      {
+        "degree": "Study abroad – Computer Science",
+        "organisation": "University of Stockholm",
+        "time": "08/2012 – 02/2013",
+        "description": "Focus areas: data mining, network security, computer security."
+      }
+    ]
+  },
+  "languages": {
+    "heading": "Languages",
+    "maxLevel": 10,
+    "items": [
+      { "name": "German (native)", "level": 10 },
+      { "name": "English (fluent)", "level": 9.5 }
+    ]
+  },
+  "interests": {
+    "heading": "Interests",
+    "items": [
+      "Competitive endurance sports (triathlon, running, road cycling)",
+      "Cooking & food",
+      "Tech & games"
+    ]
+  }
+}
