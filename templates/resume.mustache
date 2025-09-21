@@ -32,56 +32,54 @@
     <div class="container-fluid">
       <div class="main-content-wrapper">
         <div class="container-fluid">
-          <div class="resume-wrapper mx-auto rounded-2">
-            <div class="resume-actions d-flex flex-column flex-sm-row align-items-center justify-content-center justify-content-sm-end gap-3 w-100 px-4 px-lg-5 pt-4 d-print-none">
-              <div class="language-switcher d-flex flex-column flex-sm-row align-items-center justify-content-center justify-content-sm-end gap-2">
-                <span class="text-uppercase small fw-semibold">{{languageSwitcher.label}}</span>
-                <div class="btn-group btn-group-sm" role="group" aria-label="{{languageSwitcher.ariaLabel}}">
-                  {{#languageSwitcher.options}}
-                  <a class="btn btn-outline-secondary btn-sm{{#isActive}} active{{/isActive}}" href="{{href}}" lang="{{value}}" hreflang="{{hreflang}}"{{#isActive}} aria-current="page"{{/isActive}}>{{shortLabel}}</a>
-                  {{/languageSwitcher.options}}
-                </div>
+          <div class="resume-wrapper-container mx-auto position-relative">
+            <div class="language-switcher resume-language-switcher d-print-none">
+              <div class="btn-group btn-group-sm" role="group" aria-label="{{languageSwitcher.ariaLabel}}">
+                {{#languageSwitcher.options}}
+                <a class="btn btn-outline-secondary btn-sm{{#isActive}} active{{/isActive}}" href="{{href}}" lang="{{value}}" hreflang="{{hreflang}}"{{#isActive}} aria-current="page"{{/isActive}}>{{shortLabel}}</a>
+                {{/languageSwitcher.options}}
               </div>
-              <a class="btn btn-primary" href="{{topBar.contactLink}}">{{topBar.contactLabel}}</a>
             </div>
-            <div class="resume-header px-4 px-lg-5 py-4 py-lg-5">
-              <div class="resume-profile-holder text-center text-md-start d-flex flex-column flex-md-row align-items-center align-items-md-start gap-4 gap-lg-5">
-                <div class="flex-shrink-0">
-                  <img class="resume-profile-pic rounded-circle" src="{{profileImage}}" alt="{{header.profileImageAlt}}">
-                </div>
-                <div class="flex-grow-1 w-100">
-                  <h2 class="resume-name text-uppercase mb-2 mb-lg-3">{{header.name}}</h2>
-                  <div class="resume-role-title text-uppercase">{{header.role}}</div>
-                  <div class="resume-contact mt-4 mt-md-3">
-                    <ul class="resume-contact-list row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3 list-unstyled mb-0">
-                      {{#header.contact}}
-                      <li class="col d-flex align-items-center gap-2 text-break">
-                        <i class="resume-contact-icon {{icon}} flex-shrink-0"></i>
-                        {{#href}}
-                        <a class="text-reset text-decoration-none" href="{{href}}">{{text}}</a>
-                        {{/href}}
-                        {{^href}}
-                        <span>{{text}}</span>
-                        {{/href}}
-                      </li>
-                      {{/header.contact}}
-                    </ul>
+            <div class="resume-wrapper rounded-2">
+              <a class="btn btn-primary resume-contact-cta d-print-none" href="{{topBar.contactLink}}">{{topBar.contactLabel}}</a>
+              <div class="resume-header px-4 px-lg-5 py-4 py-lg-5">
+                <div class="resume-profile-holder text-center text-md-start d-flex flex-column flex-md-row align-items-center align-items-md-start gap-4 gap-lg-5">
+                  <div class="flex-shrink-0">
+                    <img class="resume-profile-pic rounded-circle" src="{{profileImage}}" alt="{{header.profileImageAlt}}">
+                  </div>
+                  <div class="flex-grow-1 w-100">
+                    <h2 class="resume-name text-uppercase mb-2 mb-lg-3">{{header.name}}</h2>
+                    <div class="resume-role-title text-uppercase">{{header.role}}</div>
+                    <div class="resume-contact mt-4 mt-md-3">
+                      <ul class="resume-contact-list row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3 list-unstyled mb-0">
+                        {{#header.contact}}
+                        <li class="col d-flex align-items-center gap-2 text-break">
+                          <i class="resume-contact-icon {{icon}} flex-shrink-0"></i>
+                          {{#href}}
+                          <a class="text-reset text-decoration-none" href="{{href}}">{{text}}</a>
+                          {{/href}}
+                          {{^href}}
+                          <span>{{text}}</span>
+                          {{/href}}
+                        </li>
+                        {{/header.contact}}
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="resume-body p-4 p-lg-5">
-              <div class="row g-4 g-lg-5">
-                <div class="col-main col-12 col-lg-8 pe-lg-4">
-                  <section class="resume-summary-section resume-section">
-                    <h3 class="resume-section-heading text-uppercase py-2 py-lg-3"><i class="resume-section-heading-icon bi bi-person me-2"></i>{{summary.heading}}</h3>
-                    <div class="resume-summary-desc">
-                      {{#summary.paragraphs}}
-                      <p>{{.}}</p>
-                      {{/summary.paragraphs}}
-                    </div>
-                  </section>
+              <div class="resume-body p-4 p-lg-5">
+                <div class="row g-4 g-lg-5">
+                  <div class="col-main col-12 col-lg-8 pe-lg-4">
+                    <section class="resume-summary-section resume-section">
+                      <h3 class="resume-section-heading text-uppercase py-2 py-lg-3"><i class="resume-section-heading-icon bi bi-person me-2"></i>{{summary.heading}}</h3>
+                      <div class="resume-summary-desc">
+                        {{#summary.paragraphs}}
+                        <p>{{.}}</p>
+                        {{/summary.paragraphs}}
+                      </div>
+                    </section>
 
                   <hr>
 
@@ -150,18 +148,6 @@
 
                   <hr>
 
-                  <section class="resume-section">
-                    <h3 class="resume-section-heading text-uppercase py-2 py-lg-3"><i class="resume-section-heading-icon bi bi-collection-play me-2"></i>{{projects.heading}}</h3>
-                  {{#projects.items}}
-                    <div class="item">
-                      <h4 class="item-heading"><i class="item-icon bi bi-square-fill me-2"></i>{{name}}</h4>
-                      <div class="item-desc">{{description}}</div>
-                    </div>
-                  {{/projects.items}}
-                  </section>
-
-                  <hr>
-
                   <section class="resume-educate-section resume-section">
                     <h3 class="resume-section-heading text-uppercase py-2 py-lg-3"><i class="resume-section-heading-icon bi bi-book me-2"></i>{{education.heading}}</h3>
                     <ul class="list-unstyled">
@@ -210,6 +196,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
 
     <footer class="footer text-center py-4 d-print-none">

@@ -148,10 +148,6 @@ export function createView({ localeConfig, translation, translations, config, pr
       heading: translation.softSkills?.heading ?? '',
       items: translation.softSkills?.items ?? [],
     },
-    projects: {
-      heading: translation.projects?.heading ?? '',
-      items: translation.projects?.items ?? [],
-    },
     education: {
       heading: translation.education?.heading ?? '',
       items: educationItems,

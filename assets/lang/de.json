@@ -198,27 +198,6 @@
       "Code-Quality & Reviews"
     ]
   },
-  "projects": {
-    "heading": "Projekte (Auswahl)",
-    "items": [
-      {
-        "name": "OMR – Reviews",
-        "description": "Reviews-Produkt mitgeplant und Kernkomponenten der skalierbaren Architektur implementiert."
-      },
-      {
-        "name": "Peek & Cloppenburg – Corporate Sites",
-        "description": "Corporate-Websites modernisiert: Next.js + Headless CMS für bessere Performance & effizientere Workflows."
-      },
-      {
-        "name": "XING – GDPR-Infrastruktur",
-        "description": "Compliance-fähige Systeme im „Startpage“-Team mitkonzipiert und entwickelt, Fokus auf Stabilität & Wartbarkeit."
-      },
-      {
-        "name": "A.W. Niemeyer – Shopify & ERP",
-        "description": "Shopify-Migration inkl. Custom Apps; ERP-Modernisierung für Echtzeit-Verfügbarkeiten im Handel."
-      }
-    ]
-  },
   "education": {
     "heading": "Ausbildung",
     "items": [
