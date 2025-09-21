@@ -1,0 +1,19 @@
+{
+  "template": "templates/resume.mustache",
+  "defaultLocale": "en",
+  "assets": {
+    "profileImage": "assets/images/patrick-nüser.256x256.jpg"
+  },
+  "locales": [
+    {
+      "locale": "en",
+      "source": "assets/lang/en.json",
+      "output": "index.html"
+    },
+    {
+      "locale": "de",
+      "source": "assets/lang/de.json",
+      "output": "index.de.html"
+    }
+  ]
+}

@@ -4,37 +4,40 @@
 These instructions apply to the entire repository.
 
 ## Project Overview
-This project is a fully static résumé site. Everything runs in the browser with plain HTML, CSS, and JavaScript that work when the files are served from a basic static web host.
+This project publishes Patrick Nüser's résumé as a fully static website. All language-specific content is stored in JSON files and rendered into prebuilt HTML pages via a small Node-based pipeline so the site works on GitHub Pages without requiring client-side JavaScript.
+
+## Build & Localisation Workflow
+- `pnpm build` runs `scripts/build.mjs`, rendering `templates/resume.mustache` with the locale data from `assets/lang/*.json` and the configuration in `build.config.json`.
+- Whenever you edit the template, localisation JSON, build configuration, or the build script itself, rerun `pnpm build` and commit the regenerated `index.html` files to keep them in sync.
+- The build script also ensures that each language version links to the others. Preserve those cross-links when making changes.
 
 ## Tooling & Dependencies
-- Keep the stack simple: do not add frontend frameworks, component compilers, build pipelines, or runtime dependencies (React, Vue, Angular, Webpack, Vite, etc.).
-- Stick to vanilla ES6 modules/DOM APIs, hand-authored HTML, and plain CSS (generated from the existing SCSS files).
-- Third-party assets already in the project (Bootstrap CSS, Bootstrap Icons, Font Awesome) may be used as-is, but avoid introducing new library CDNs unless absolutely necessary.
+- Keep the stack lightweight: no frontend frameworks, bundlers, or runtime dependencies such as React, Vue, Angular, Webpack, or Vite.
+- Use pnpm for dependency management. All tooling lives in `devDependencies` and should stay minimal.
 
 ## HTML Guidelines
-- Preserve semantic markup and the existing document outline.
-- Many elements are referenced by `assets/js/i18n.js` via hard-coded IDs (e.g., `language-select`, `resume-name`, `experience-timeline`, etc.). Do not rename or remove these IDs without updating the script and the translations accordingly.
-- Keep accessibility attributes (alt text, aria labels, roles) accurate whenever you change content.
+- Preserve the semantic structure of the résumé template and maintain the document outline.
+- IDs referenced by `assets/js/i18n.js` must remain stable; update the script and translations in tandem if you need to rename them.
+- Maintain accurate accessibility attributes (alt text, aria labels, roles) when adjusting markup or content.
 
 ## CSS/SCSS Guidelines
-- Uses bootstrap v5.3.3
-- Use bootstrap components and utilities
-- The shipped stylesheet lives in `assets/css/shine.css` - DO NOT edit directly.
-- Modify the SCSS sources in `assets/scss/`, and use sass to regenerate `shine.css` file
-- Keep the layout responsive and mobile-friendly; test at multiple viewport widths when you adjust styling.
+- Styling is based on Bootstrap 5.3.3 and the Shine theme.
+- Modify the SCSS sources in `assets/scss/` and recompile `assets/css/shine.css` with Sass; never edit the compiled CSS directly.
+- Ensure the layout remains responsive—spot-check changes on small and large viewports.
 
 ## JavaScript Guidelines
-- All behaviour is implemented with vanilla JS in `assets/js/i18n.js`. Extend it using the same style (modular functions, early returns for null checks, no transpilation-only syntax).
-- Avoid introducing global variables unless they are needed by the HTML; prefer module-scoped helpers.
-- Maintain graceful error handling for network operations (language file fetches, etc.).
+- Behaviour is implemented with vanilla ES modules in `assets/js/`. Follow the existing modular style and avoid adding global variables unless necessary.
+- Do not introduce transpilation-only syntax or new build tooling.
 
-## Localization Content
-- Language data lives in `assets/lang/*.json`. When you add or edit content, keep keys consistent across all language files.
-- Ensure each language file includes the metadata section used for `<title>` and `<meta>` tags so they remain localized.
+## Localisation Content
+- Keep localisation keys consistent across every file in `assets/lang/`.
+- Ensure each language includes the metadata required for the `<head>` section so titles and descriptions stay localised.
 
 ## Assets
-- Place new static assets under `assets/images/` and reference them with relative paths.
-- Compress large images before committing to keep the repository lightweight.
+- Place new static assets under `assets/images/` and compress large files before committing.
+- Reference assets with relative paths that work when hosted from the repository root.
 
-## Testing & Preview
-- There are no automated tests. Manually preview the site by serving the repository via a simple static server (for example, `python3 -m http.server`) and inspecting it in a browser.
+## Testing, Linting & Preview
+- Unit tests live under `tests/` and guard the build pipeline. Run `pnpm test` after changing the template, build script, config, or localisation data.
+- Run `pnpm lint:fix` whenever you touch JavaScript or HTML to keep formatting and lint rules satisfied.
+- Preview the site with a simple static server such as `python3 -m http.server` before shipping visual changes.
