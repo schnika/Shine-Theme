@@ -47,59 +47,73 @@ function setHeadingText(element, text) {
 }
 
 function renderLanguageSelector(data, language) {
-  const select = document.getElementById('language-select');
+  const container = document.getElementById('language-select');
   const label = document.getElementById('language-select-label');
 
-  if (!select) {
+  if (!container) {
     return;
   }
 
-  if (label && data?.label) {
-    label.textContent = data.label;
+  if (label) {
+    label.textContent = data?.label || '';
   }
 
-  select.innerHTML = '';
-  const options = Array.isArray(data?.options) ? data.options : [];
-  options.forEach((option) => {
-    if (!option || !option.value) {
-      return;
-    }
-    if (!LANGUAGE_FILES[option.value]) {
-      return;
-    }
-    const opt = document.createElement('option');
-    opt.value = option.value;
-    opt.textContent = option.label || option.value;
-    select.appendChild(opt);
-  });
-
-  if (!Array.from(select.options).some((opt) => opt.value === language)) {
-    const opt = document.createElement('option');
-    opt.value = language;
-    opt.textContent = language;
-    select.appendChild(opt);
-  }
-
-  select.value = language;
+  container.innerHTML = '';
+  container.classList.add('btn-group', 'btn-group-sm');
+  container.setAttribute('role', 'group');
 
   const ariaLabel = data?.ariaLabel || data?.label;
   if (ariaLabel) {
-    select.setAttribute('aria-label', ariaLabel);
+    container.setAttribute('aria-label', ariaLabel);
   } else {
-    select.removeAttribute('aria-label');
+    container.removeAttribute('aria-label');
   }
 
-  const { jQuery } = window;
-  if (jQuery && jQuery.fn && typeof jQuery.fn.selectpicker === 'function') {
-    const $select = jQuery(select);
-    if ($select.data('selectpicker')) {
-      $select.selectpicker('refresh');
-    } else {
-      $select.selectpicker();
+  const options = Array.isArray(data?.options) ? data.options : [];
+  let hasActiveButton = false;
+
+  options.forEach((option) => {
+    if (!option || !option.value || !LANGUAGE_FILES[option.value]) {
+      return;
     }
-    if (language) {
-      $select.selectpicker('val', language);
+
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.classList.add('btn', 'btn-outline-secondary', 'btn-sm');
+    button.dataset.language = option.value;
+
+    const text =
+      typeof option.shortLabel === 'string' && option.shortLabel.trim()
+        ? option.shortLabel
+        : option.value.toUpperCase();
+    button.textContent = text;
+
+    if (typeof option.label === 'string' && option.label.trim()) {
+      button.setAttribute('aria-label', option.label);
+      button.title = option.label;
     }
+
+    const isActive = option.value === language;
+    button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    if (isActive) {
+      button.classList.add('active');
+      hasActiveButton = true;
+    }
+
+    container.appendChild(button);
+  });
+
+  if (!hasActiveButton && LANGUAGE_FILES[language]) {
+    const fallbackButton = document.createElement('button');
+    fallbackButton.type = 'button';
+    fallbackButton.classList.add('btn', 'btn-outline-secondary', 'btn-sm', 'active');
+    fallbackButton.dataset.language = language;
+    const fallbackLabel = language.toUpperCase();
+    fallbackButton.textContent = fallbackLabel;
+    fallbackButton.setAttribute('aria-pressed', 'true');
+    fallbackButton.setAttribute('aria-label', fallbackLabel);
+    fallbackButton.title = fallbackLabel;
+    container.appendChild(fallbackButton);
   }
 }
 
@@ -568,13 +582,32 @@ async function loadLanguage(language) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const select = document.getElementById('language-select');
+  const languageContainer = document.getElementById('language-select');
   const storedLanguage = localStorage.getItem('preferredLanguage');
   const initialLanguage = storedLanguage && LANGUAGE_FILES[storedLanguage] ? storedLanguage : 'en';
 
-  if (select) {
-    select.addEventListener('change', (event) => {
-      const chosenLanguage = event.target.value;
+  if (languageContainer) {
+    languageContainer.addEventListener('click', (event) => {
+      let current = event.target;
+      let button = null;
+
+      while (current && current !== languageContainer) {
+        if (typeof current.matches === 'function' && current.matches('button[data-language]')) {
+          button = current;
+          break;
+        }
+        current = current.parentElement || null;
+      }
+
+      if (!button) {
+        return;
+      }
+
+      const chosenLanguage = button.dataset.language;
+      if (!chosenLanguage || chosenLanguage === currentLanguage) {
+        return;
+      }
+
       loadLanguage(chosenLanguage).then((loadedLanguage) => {
         if (loadedLanguage && LANGUAGE_FILES[loadedLanguage]) {
           localStorage.setItem('preferredLanguage', loadedLanguage);

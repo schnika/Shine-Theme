@@ -8,8 +8,8 @@
     "label": "Language",
     "ariaLabel": "Select language",
     "options": [
-      { "value": "en", "label": "English" },
-      { "value": "de", "label": "German" }
+      { "value": "en", "label": "English", "shortLabel": "EN" },
+      { "value": "de", "label": "German", "shortLabel": "DE" }
     ]
   },
   "topBar": {
