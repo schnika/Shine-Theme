@@ -2,8 +2,40 @@
 .resume-wrapper {
         margin-top: 90px;
         position: relative;
-    padding: 3rem 0 0;
+    padding: 3rem 0 4.5rem;
     background: $theme-bg-secondary;
+}
+
+.resume-wrapper-container {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+}
+
+.resume-language-switcher {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0.5rem;
+        z-index: 2;
+}
+
+.resume-contact-cta {
+        position: absolute;
+        bottom: 2.5rem;
+        right: 2.5rem;
+        z-index: 2;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        border-radius: 999px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15);
 }
 
 .resume-profile-pic {
@@ -30,9 +62,11 @@
 }
 
 .resume-body {
-	.col-main {
-		border-right: 1px solid rgba(256, 256, 256, 0.2);
-	}
+        padding-bottom: 6rem;
+
+        .col-main {
+                border-right: 1px solid rgba(256, 256, 256, 0.2);
+        }
 }
 
 .resume-section {
@@ -244,6 +278,26 @@
         .resume-wrapper {
                 max-width: 980px;
         }
+
+        .resume-wrapper-container {
+                max-width: 980px;
+        }
+}
+
+@media (max-width: 991.98px) {
+        .resume-language-switcher {
+                position: static;
+                transform: none;
+                margin-bottom: 1.5rem;
+                justify-content: flex-end;
+        }
+}
+
+@media (max-width: 767.98px) {
+        .resume-contact-cta {
+                bottom: 2rem;
+                right: 2rem;
+        }
 }
 
 // Small devices (phones, less than 576px)
@@ -260,8 +314,21 @@
 
         .resume-wrapper {
                 margin-top: 0;
-                padding: 0;
+                padding: 0 0 4.5rem;
                 border-radius: 0 !important;
+        }
+
+        .resume-body {
+                padding-bottom: 5rem;
+        }
+
+        .resume-language-switcher {
+                justify-content: center;
+        }
+
+        .resume-contact-cta {
+                bottom: 1.5rem;
+                right: 1.5rem;
         }
 }
 
