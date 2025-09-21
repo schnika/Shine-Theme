@@ -41,3 +41,7 @@ This project publishes Patrick Nüser's résumé as a fully static website. All 
 - Unit tests live under `tests/` and guard the build pipeline. Run `pnpm test` after changing the template, build script, config, or localisation data.
 - Run `pnpm lint:fix` whenever you touch JavaScript or HTML to keep formatting and lint rules satisfied.
 - Preview the site with a simple static server such as `python3 -m http.server` before shipping visual changes.
+
+## Git
+- Use semantic commit messages
+- Apply semantic versioning
