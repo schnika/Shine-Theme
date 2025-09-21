@@ -6,7 +6,8 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "lint:fix": "eslint --fix assets/js && htmlhint index.html index.de.html",
-    "test": "node --test"
+    "test": "node --test",
+    "pdf": "node scripts/generate-pdf.mjs --output artifacts/resume.pdf"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
     "eslint": "^9.36.0",
     "globals": "^16.4.0",
     "htmlhint": "^1.7.1",
-    "mustache": "^4.2.0"
+    "mustache": "^4.2.0",
+    "playwright": "^1.55.0"
   }
 }
