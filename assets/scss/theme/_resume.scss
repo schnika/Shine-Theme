@@ -240,10 +240,29 @@
 }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) { 
-	.resume-wrapper {
-		max-width: 980px;
-	}
+@media (min-width: 992px) {
+        .resume-wrapper {
+                max-width: 980px;
+        }
+}
+
+// Small devices (phones, less than 576px)
+@media (max-width: 575.98px) {
+        body > .container-fluid {
+                padding-left: 0;
+                padding-right: 0;
+        }
+
+        .main-content-wrapper > .container-fluid {
+                padding-left: 0;
+                padding-right: 0;
+        }
+
+        .resume-wrapper {
+                margin-top: 0;
+                padding: 0;
+                border-radius: 0 !important;
+        }
 }
 
 
