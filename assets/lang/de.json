@@ -53,7 +53,6 @@
         "company": "1Komma5° Heartbeat GmbH · Hamburg",
         "title": "Senior Softwareentwickler",
         "bullets": [
-          "Lead-Qualifizierungs-Service: Technische Projektleitung & Systemdesign → ~10 Min. Zeitersparnis pro Lead, validierte/standardisierte Datenerfassung für Reporting & Downstream-Systeme.",
           "Architektur: ADR für Workflow Engines & Zoho CRM konzipiert → Standardisierung & Skalierbarkeit von CRM-Integrationen.",
           "Mentoring: Regelmäßige Pairing-Sessions; Vermittlung von Patterns & Principles → Skill-Aufbau im Team.",
           "AI/LLM: Mitgestaltung der LLM-Arbeitsgruppe → Standards für LLM-gestützte Entwicklung etabliert."
