@@ -53,7 +53,6 @@
         "company": "1Komma5° Heartbeat GmbH · Hamburg",
         "title": "Senior Software Engineer",
         "bullets": [
-          "Lead qualification service: technical project leadership & system design → ~10 minutes saved per lead, validated/standardized data capture for reporting & downstream systems.",
           "Architecture: designed ADRs for workflow engines & Zoho CRM → standardized & scalable CRM integrations.",
           "Mentoring: regular pairing sessions; sharing patterns & principles → capability building within the team.",
           "AI/LLM: co-shaped the LLM working group → established standards for LLM-assisted development."
